@@ -44,7 +44,7 @@ async function predictSentiment(){
     <button onclick="loadModelAndWordIndex();">Load Model</button>
 </div>
 <div>
-    <textarea rows="5" cols="100" id="reviewText">
+    <textarea rows="5" cols="70" id="reviewText">
             Type your review here!
     </textarea>
 </div>
