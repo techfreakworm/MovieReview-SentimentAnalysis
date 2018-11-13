@@ -48,9 +48,7 @@ async function predictSentiment(){
 # Sentiment Analysis on IMDB Movie reviews
 ### Algorithm: Multilayered Perceptron (MLP) - Keras Sequential
 <div>
-    <textarea rows="5" cols="70" id="reviewText">
-            Type your review here!
-    </textarea>
+    <textarea rows="5" cols="70" id="reviewText">Type your review here!</textarea>
 </div>
 <div>
     <button onclick="predictSentiment();">Predict Sentiment</button>
