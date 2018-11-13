@@ -1,5 +1,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.3/dist/tf.min.js"> </script>
 <script>
+var isModelLoaded = false
+
 async function loadModelAndWordIndex(){
     document.getElementById("result").innerHTML = "Loading Model, please wait..."
     this.model = await tf.loadModel('kerasMLPTfjs/model.json')
@@ -10,6 +12,12 @@ async function loadModelAndWordIndex(){
 }
 
 async function predictSentiment(){
+
+    if (!isModelLoaded){
+        await loadModelAndWordIndex()
+        isModelLoaded = true
+    }
+
     const inputText = document.getElementById("reviewText").value.trim().toLowerCase().replace(/(\.|\,|\!)/g, '').split(' ');
 
     const inputBuffer = tf.buffer([1, 100], 'int32');
@@ -39,10 +47,6 @@ async function predictSentiment(){
 
 # Sentiment Analysis on IMDB Movie reviews
 ### Algorithm: Multilayered Perceptron (MLP) - Keras Sequential
-
-<div>
-    <button onclick="loadModelAndWordIndex();">Load Model</button>
-</div>
 <div>
     <textarea rows="5" cols="70" id="reviewText">
             Type your review here!
