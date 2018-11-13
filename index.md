@@ -7,7 +7,7 @@
         const wordIndexJson = await fetch('word_index_data.json')
         const wordIndexData = await wordIndexJson.json();
         this.wordIndex = wordIndexData['word_index']
-        document.getElementById("result").innerHTML = "Model loaded, type in your review and hit predict. Happy Predicting! :)"
+        document.getElementById("result").innerHTML = "Model loaded, type in your review to predict sentiment. Happy Predicting! :)"
     }
 
     async function predictSentiment(text){
@@ -51,7 +51,7 @@
 # Sentiment Analysis on IMDB Movie reviews
 ### Algorithm: Multilayered Perceptron (MLP) - Keras Sequential
 <div>
-    <textarea rows="5" cols="70" id="reviewText">Type your review here!</textarea>
+    <textarea rows="5" cols="70" id="reviewText" placeholder="Type your review here!"></textarea>
 </div>
 <div>
     <p id="result"></p>
