@@ -73,20 +73,20 @@
 ### Algorithm: Multilayered Perceptron (MLP) - Keras Sequential
 
 <div id="predictDiv" style="display:none;">
-            <div>
-                <textarea rows="5" cols="70" id="reviewText" placeholder="Type your review here!"></textarea>
-            </div>
-            <button onclick="predictSentiment();" id="predictButton">Predict</button>
-        </div>
-        <div>
-            <h4>Info:</h4>
-            <p id="info"></p>
-        </div>
-        <div>
-            <h4>CNN:</h4>
-            <p id="CNNresult"></p>
-        </div>
-        <div>
-            <h4>LSTM:</h4>
-            <p id="LSTMresult"></p>
-        </div>
+<div>
+    <textarea rows="5" cols="70" id="reviewText" placeholder="Type your review here!"></textarea>
+</div>
+<button onclick="predictSentiment();" id="predictButton">Predict</button>
+</div>
+<div>
+<h4>Info:</h4>
+<p id="info"></p>
+</div>
+<div>
+<h4>CNN:</h4>
+<p id="CNNresult"></p>
+</div>
+<div>
+<h4>LSTM:</h4>
+<p id="LSTMresult"></p>
+</div>
