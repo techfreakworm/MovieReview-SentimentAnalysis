@@ -120,7 +120,7 @@
                         display: true,
                         scaleLabel: {
                             display: true,
-                            labelString: 'Predictions'
+                            labelString: 'Prediction number'
                         }
                     }],
                     yAxes: [{
