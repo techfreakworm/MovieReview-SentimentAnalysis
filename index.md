@@ -54,10 +54,10 @@
     {
         let elementID = '#' + element + 'result'
         if (score>0.5){
-            $(elementID).text("Positive review, score: " + score )
+            $(elementID).text("Positive review, Confidence: "+ score*100 + " %" )
         }
         else if (score<0.5){
-            $(elementID).text("Negative review, score: " + score )
+            $(elementID).text("Negative review, Confidence: " + (1-score)*100 + " %")
         }
         else{
             $(elementID).text("Something went wrong")
